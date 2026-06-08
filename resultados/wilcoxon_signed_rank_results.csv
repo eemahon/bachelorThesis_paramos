@@ -1,0 +1,5 @@
+Parameter,Unit,n,W_statistic,p_value,Result,Significance
+Bulk density,g/cm³,38,0,0,significant,*** p<0.001
+Field capacity,cm³/cm³,38,0,0,significant,*** p<0.001
+Wilting point,cm³/cm³,38,0,0,significant,*** p<0.001
+Near-saturation (10 kPa),cm³/cm³,38,0,0,significant,*** p<0.001

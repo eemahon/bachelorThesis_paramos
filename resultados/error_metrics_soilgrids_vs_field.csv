@@ -1,0 +1,5 @@
+Parameter,Unit,n,Bias,MAE,RMSE,rRMSE_percent
+Bulk density,g/cm³,38,0.664921,0.664921,0.669365,173.47
+Field capacity,cm³/cm³,38,-0.261474,0.261474,0.273688,44.307
+Wilting point,cm³/cm³,38,-0.168513,0.168513,0.177233,52.723
+Near-saturation (10 kPa),cm³/cm³,38,-0.390276,0.390276,0.391496,48.336

@@ -1,0 +1,12 @@
+data/smap/
+data/dems/
+
+*.h5
+*.tif
+
+Galapagos/
+
+Pisos Bioclimaticos_Azuay/
+Precipitacion_1970_2000_Azuay/
+Temperatura_1970_2000_Azuay/
+soil_moisture/

@@ -1,0 +1,9 @@
+Site,Parameter,Unit,n,Bias,MAE,RMSE,rRMSE_percent
+Llaviuco,Bulk density,g/cm³,18,0.697833,0.697833,0.701767,208.997
+Llaviuco,Field capacity,cm³/cm³,18,-0.327389,0.327389,0.329025,49.444
+Llaviuco,Wilting point,cm³/cm³,18,-0.159444,0.159444,0.164331,50.615
+Llaviuco,Near-saturation (10 kPa),cm³/cm³,18,-0.409889,0.409889,0.410789,49.374
+Yanasacha,Bulk density,g/cm³,30,0.701067,0.701067,0.709477,192.218
+Yanasacha,Field capacity,cm³/cm³,30,-0.2357,0.2357,0.246473,41.32
+Yanasacha,Wilting point,cm³/cm³,30,-0.159167,0.159167,0.171678,52.511
+Yanasacha,Near-saturation (10 kPa),cm³/cm³,30,-0.408067,0.408067,0.41192,50.265

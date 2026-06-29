@@ -1,0 +1,9 @@
+Metric,Value
+Mean Abs Difference,0.4027
+Median Abs Difference,0.4091
+Max Abs Difference,0.5373
+Min Abs Difference,0.2605
+Std Dev Abs Difference,0.0535
+Mean Signed Difference (SMAP-TDR),-0.4027
+Days SMAP > TDR,0
+Days SMAP < TDR,1411

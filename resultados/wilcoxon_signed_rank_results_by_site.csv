@@ -1,9 +1,9 @@
 Site,Parameter,Unit,n,W_statistic,p_value,Result,Significance
-Llaviuco,Bulk density,g/cm³,18,0.0,8e-06,significant,*** p<0.001
-Llaviuco,Field capacity,cm³/cm³,18,0.0,8e-06,significant,*** p<0.001
-Llaviuco,Wilting point,cm³/cm³,18,0.0,8e-06,significant,*** p<0.001
-Llaviuco,Near-saturation (10 kPa),cm³/cm³,18,0.0,8e-06,significant,*** p<0.001
-Yanasacha,Bulk density,g/cm³,30,0.0,0.0,significant,*** p<0.001
-Yanasacha,Field capacity,cm³/cm³,30,0.0,0.0,significant,*** p<0.001
-Yanasacha,Wilting point,cm³/cm³,30,0.0,0.0,significant,*** p<0.001
-Yanasacha,Near-saturation (10 kPa),cm³/cm³,30,0.0,0.0,significant,*** p<0.001
+Llaviuco,Bulk density,g/cm3,18,0.0,8e-06,significant,*** p<0.001
+Llaviuco,Field capacity,cm3/cm3,18,0.0,0.000196,significant,*** p<0.001
+Llaviuco,Wilting point,cm3/cm3,18,0.0,8e-06,significant,*** p<0.001
+Llaviuco,Near-saturation (10 kPa),cm3/cm3,18,0.0,8e-06,significant,*** p<0.001
+Yanasacha,Bulk density,g/cm3,30,0.0,0.0,significant,*** p<0.001
+Yanasacha,Field capacity,cm3/cm3,30,0.0,2e-06,significant,*** p<0.001
+Yanasacha,Wilting point,cm3/cm3,29,0.0,3e-06,significant,*** p<0.001
+Yanasacha,Near-saturation (10 kPa),cm3/cm3,30,0.0,0.0,significant,*** p<0.001

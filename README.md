@@ -1,53 +1,198 @@
-# Bachelor Thesis 
-## Erin Mahon
-#### B.Sc. Geography
-#### Geographisches Institut Ruhr Universität Bochum
-#### Title: Remote Sensing and Field-Based Assessment of Soil Water Storage and Soil Moisture in Fire-Affected Paramo Ecosystems of Southern Ecuador 
-#### First Supervisor: Jun-Prof. Valerie Graw
-#### Second Supervisor: Dr. José Jara Alvear
+# Remote Sensing and Field-Based Assessment of Soil Water Storage and Soil Moisture in Fire-Affected Páramo Ecosystems of Southern Ecuador
 
-### Project Overview
-This repository contains the python notebooks used for analyzing remote sensing and global products with local data in southern Ecuadorian Andean catchments. The project combines:
+**Bachelor Thesis**  
+**Erin Mahon**  
+B.Sc. Geography  
+Geographisches Institut, Ruhr University Bochum  
 
-- Field observations (soil moisture and volumetric water content)
-- Remote sensing products (NASA SMAP)
-- Global digital soil mapping system (SoilGrids)
-- Various geodata (basins, rivers, land cover, settlements, DEM-derived products)
+**First Supervisor:** Jun.-Prof. Dr. Valerie Graw  
+**Second Supervisor:** Dr. José Jara Alvear
 
-### Statistical analysis list: 
-- comparison of Soilgrids vs local volumetric water content (VWC) and bulk density measurements
-- comparison of VWC and bulk density of burned vs unburned areas in Llaviuco and Yanasacha (Tomebamba and Yanuncay subbasins)
-- comparison of SMAP rootzone (0-100cm) soil moisture and local TDR sensors (Zhurucay subbasin)
+---
 
-### Repository Structure
+## Project Overview
 
-- analysis/: Analysis notebooks (Soilgrids, SMAP, Burned vs Unburned and NBR calculations)
-- figures/: Figure-generation notebooks and map outputs
-- data/: Core geospatial and tabular inputs used in analyses
-- TDR_data/: Time-series and derived data products (including SMAP and precipitation anomaly csvs)
-- google_code_editor/: Google Earth Engine JavaScript scripts (for SMAP and CHIRPS)
-- datos_martha/: data from Martha Days soil sampling with results processed by the Hydrology Lab of the Departamento de Recurso Hidricos y Ciencias Ambientales de la Universidad de Cuenca
-- Yanasacha/, Llaviuco/: shapes of the 2024 fire sites
-- Zwischenergebnisse/: Intermediate outputs mainly for the TDR/SMAP analysis
+This repository contains the analysis scripts, figure generation notebooks, and Google Earth Engine (GEE) scripts used for my bachelor thesis investigating the performance of global soil property and soil moisture products in the southern Ecuadorian páramo.
 
-## Analysis and Scripts
+The study combines **field observations**, **remote sensing products**, and **global geospatial datasets** to evaluate whether globally available datasets adequately represent the hydrological characteristics of tropical alpine ecosystems.
 
-#### Notebooks
-- analysis/burned_vs_unburned.ipynb: Burned vs unburned comparisons
-- analysis/nbr.ipynb: NBR-related calculations
-- analysis/results_sm.ipynb: Soil moisture result summaries
-- analysis/results_vwc.ipynb: Volumetric water content result summaries
-- figures/fire_sites.ipynb, figures/introduction_study_maps.ipynb, figures/study_area.ipynb: Figure and map creation
+The main objectives were to:
 
-#### Google Earth Engine Scripts
-- google_code_editor/peatmask.js
-- google_code_editor/precip_anomaly.js
-- google_code_editor/precip_chrps.js
-- google_code_editor/SMAP.js
+- Evaluate the accuracy of **SoilGrids** hydraulic property predictions using laboratory measurements of volcanic Andosol samples.
+- Evaluate the performance of **NASA SMAP Level 4 Root-Zone Soil Moisture** against in-situ TDR observations.
+- Assess whether the SMAP validation site is representative of the surrounding landscape through analyses of vegetation, land cover, and topography.
+- Investigate burn severity and post-fire environmental conditions within two burned páramo catchments.
 
-### Notes on Data Sources and Licensing
-- Some exported geospatial data in data/ includes OpenStreetMap-derived products (see data/Readme.txt).
-- Use and redistribution should respect each upstream data provider license (for example ODbL for OSM-derived exports and original licenses for satellite and climatology products).
+---
 
-### Status
-This repository is an active research workspace and includes raw inputs, intermediate files, scripts, and result summaries.
+## Data Sources
+
+The project combines multiple datasets:
+
+### Field observations
+- Soil hydraulic property measurements (bulk density, field capacity, wilting point, saturated water content)
+- In-situ TDR root-zone soil moisture observations
+- Soil sampling data from the Universidad de Cuenca Hydrology Laboratory
+
+### Remote sensing
+- NASA SMAP Level 4 Root-Zone Soil Moisture
+- Sentinel-2 imagery
+- Copernicus World Topography for DEM
+
+### Global datasets
+- SoilGrids 2.0
+
+### Study Area data
+- IERSE provided various vector datasets (catchments, rivers, roads, settlements)
+
+---
+
+# Repository Structure
+
+```
+analysis/
+    SoilGrids validation
+    SMAP validation
+    Burned vs. unburned analyses
+    NBR calculations
+    Results figures
+
+figures/
+    Map creation
+    Study area figures
+    Fire site figures
+
+google_code_editor/
+    Google Earth Engine scripts
+
+data/
+    Geospatial datasets
+    Processed analysis tables
+
+datos_martha/
+    Laboratory soil measurements
+
+Llaviuco/
+Yanasacha/
+    Fire perimeter shapefiles
+```
+
+---
+
+# Analysis Workflow
+
+## 1. SoilGrids Validation
+
+Notebook:
+
+- `analysis/soilgrids_vwc.ipynb`
+
+This notebook compares SoilGrids predictions against field measurements for:
+
+- Bulk density
+- Field capacity
+- Wilting point
+- Saturated water content
+- Available water capacity
+
+Statistical analyses include:
+
+- Paired statistical tests
+- Error metrics
+- Scatter plots
+- Spatial visualization
+
+---
+
+## 2. SMAP Root-Zone Soil Moisture Validation
+
+Notebook:
+
+- `analysis/smap_soilmoisture.ipynb`
+
+Compares SMAP Level 4 Root-Zone Soil Moisture (0–100 cm) with in-situ TDR observations from the Zhurucay catchment.
+
+Analyses include:
+
+- Daily and monthly comparisons
+- Correlation analysis
+- RMSE
+- Bias
+- Standardized anomaly (z-score) comparison
+- Time series visualization
+
+---
+
+## 3. Representativeness Analysis
+
+Notebook:
+
+- `analysis/smap_landuse.ipynb`
+
+Evaluates whether the SMAP validation site is representative of the surrounding SMAP pixel.
+
+Analyses include:
+
+- Sentinel-2 RGB composite
+- NDVI calculation
+- Dynamic World land cover classification
+- Elevation distribution
+- Slope distribution
+- Comparison between the study catchment and the complete SMAP footprint
+
+This analysis provides context for interpreting the SMAP validation results by assessing how representative the field site is of the larger satellite footprint.
+
+---
+
+## 4. Burn Severity Analysis
+
+Notebooks:
+
+- `analysis/burned_vs_unburned.ipynb`
+- `analysis/nbr.ipynb`
+
+These notebooks evaluate fire impacts within the Llaviuco and Yanasacha páramo catchments through:
+
+- Normalized Burn Ratio (NBR)
+- Burned vs. unburned comparisons
+- Vegetation response analyses
+
+*(not used in the final thesis)*
+---
+
+## 5. Figure Generation
+
+The notebooks inside `figures/` generate the maps and figures used throughout the thesis, including:
+
+- Study area maps
+- Fire site maps
+- Sampling locations
+- Overview figures
+
+---
+
+# Google Earth Engine Scripts
+
+The `google_code_editor/` folder contains the JavaScript scripts used to export remote sensing products.
+
+Scripts include:
+
+- `SMAP.js` – SMAP Level 4 soil moisture extraction
+- `NDVI_sen2.js` – Sentinel-2 NDVI generation
+- `peatmask.js` – Global peatland mask visualization
+- `precip_anomaly.js` – CHIRPS precipitation anomaly calculations *(not used in the final thesis)*
+- `precip_chrps.js` – CHIRPS precipitation export *(not used in the final thesis)*
+
+---
+
+# Notes
+
+- This repository represents the complete computational workflow used for the thesis.
+- It contains analysis notebooks, figure generation scripts, intermediate outputs, and processed datasets.
+- Some geospatial datasets are derived from OpenStreetMap and remain subject to their original licenses.
+- Large raw datasets and proprietary laboratory data are not included where redistribution is restricted.
+
+
+
+## Citation
+If you use this repository or adapt parts of the workflow, please cite the associated bachelor thesis.
